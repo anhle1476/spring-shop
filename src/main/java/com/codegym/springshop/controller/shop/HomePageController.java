@@ -10,5 +10,11 @@ public class HomePageController {
 	public String showHomePage() {
 		return "shop/index";
 	}
+	
+	@GetMapping("/test")
+	public String showTestPage() {
+		
+		return "shop/data-test";
+	}
 
 }

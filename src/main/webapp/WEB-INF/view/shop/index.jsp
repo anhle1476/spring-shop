@@ -28,7 +28,7 @@
 						<div class="row align-items-stretch">
 							<div class="col-lg-6 p-lg-0">
 								<a class="product-view d-block h-100 bg-cover bg-center"
-									style="background: url(img/product-5.jpg)"
+									style="background: url(shop-resources/img/product-5.jpg)"
 									href="img/product-5.jpg" data-lightbox="productview"
 									title="Red digital smartwatch"></a><a class="d-none"
 									href="img/product-5-alt-1.jpg" title="Red digital smartwatch"
