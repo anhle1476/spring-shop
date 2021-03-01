@@ -12,6 +12,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <c:import url="includes/base-css.jsp" />
+<style>
+	.height-custom {
+		min-height: 200px;
+	}
+</style>
 </head>
 <body>
 	<div class="page-holder bg-light">
@@ -19,8 +24,8 @@
 		<c:import url="includes/navbar.jsp" />
 		<section class="py-5">
 			<div class="container">
-				<div class="row mb-5 d-flex justify-content-center align-items-center card" >
-					<div class="card-body text-center">
+				<div class="row my-5 d-flex justify-content-center align-items-center card height-custom" >
+					<div class="card-body text-center p-5">
 						<h2>Đặt hàng thành công</h2>
 						<a href="${pageContext.request.contextPath}/"
 							class="btn btn-primary btn-block">

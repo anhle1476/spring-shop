@@ -59,6 +59,7 @@ public class CartPageController {
 		if (obj == null)
 			return "redirect:/cart/payment";
 		
+		session.removeAttribute("payment-success");
 		return "shop/payment-success";
 	}
 
