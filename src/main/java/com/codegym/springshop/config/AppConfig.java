@@ -6,7 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.TransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -16,6 +19,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages ="com.codegym.springshop")
+@EnableTransactionManagement(proxyTargetClass = true)
 public class AppConfig implements WebMvcConfigurer {
 	
 	@Bean
@@ -37,6 +41,11 @@ public class AppConfig implements WebMvcConfigurer {
 		ds.setPassword("password");
 		
 		return ds;
+	}
+	
+	@Bean
+	public TransactionManager transactionManager() {
+		return new DataSourceTransactionManager(dataSource());
 	}
 	
 	@Bean

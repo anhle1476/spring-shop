@@ -1,1 +1,8 @@
 /* your styles go here */
+
+.fas.fa-expand,
+.fas.fa-caret-left,
+.fas.fa-caret-right,
+.fas.fa-trash-alt {
+	pointer-events: none;
+}

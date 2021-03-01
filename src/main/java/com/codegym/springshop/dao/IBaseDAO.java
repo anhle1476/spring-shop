@@ -8,11 +8,11 @@ public interface IBaseDAO<T> {
 	
 	List<T> getNthFirstObjs(int size);
 	
-	T getObjById(long id);
+	T getObjById(int id);
 
-	int addObj(T obj);
+	boolean addObj(T obj);
 	
-	int updateObj(T obj);
+	boolean updateObj(T obj);
 	
-	int deleteObj(long id);
+	boolean deleteObj(int id);
 }

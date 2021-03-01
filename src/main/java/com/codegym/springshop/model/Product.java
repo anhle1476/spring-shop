@@ -1,23 +1,24 @@
 package com.codegym.springshop.model;
 
+import java.util.Date;
+
 public class Product {
-	private long id;
+	private int id;
 	private String name;
 	private String imgUrl;
-	private float discount;
 	private long price;
 	private String details;
 	private Category category;
-	private boolean isNew;
+	private Date createdDate;
 
 	public Product() {
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -35,14 +36,6 @@ public class Product {
 
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
-	}
-
-	public float getDiscount() {
-		return discount;
-	}
-
-	public void setDiscount(float discount) {
-		this.discount = discount;
 	}
 
 	public long getPrice() {
@@ -69,20 +62,46 @@ public class Product {
 		this.category = category;
 	}
 
-	public boolean isNew() {
-		return isNew;
+	public Date getCreatedDate() {
+		return createdDate;
 	}
 
-	public void setNew(boolean isNew) {
-		this.isNew = isNew;
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", imgUrl=" + imgUrl + ", discount=" + discount + ", price="
-				+ price + ", details=" + details + ", category=" + category + ", isNew=" + isNew + "]";
+		return "Product [id=" + id + ", name=" + name + ", imgUrl=" + imgUrl + ", price="
+				+ price + ", details=" + details + ", category=" + category + ", createdDate=" + createdDate + "]";
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((category == null) ? 0 : category.hashCode());
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		if (category == null) {
+			if (other.category != null)
+				return false;
+		} else if (!category.equals(other.category))
+			return false;
+		if (id != other.id)
+			return false;
+		return true;
+	}
 
 }

@@ -4,8 +4,6 @@
 
 <!-- Bootstrap CSS-->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/shop-resources/vendor/bootstrap/css/bootstrap.min.css">
-<!-- Lightbox-->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/shop-resources/vendor/lightbox2/css/lightbox.min.css">
 <!-- Range slider-->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/shop-resources/vendor/nouislider/nouislider.min.css">
 <!-- Bootstrap select-->
